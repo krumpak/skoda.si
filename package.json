@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "author": "Gorazd Krumpak",
+  "description": "",
+  "private": true,
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-compress": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-html-validation": "*",
+    "grunt-sass": "*",
+    "grunt-git": "*"
+  },
+  "__installation": "npm install --save-dev"
+}

@@ -1,0 +1,548 @@
+.switch-content-3 {
+    width: 50px;
+    height: 25px;
+    position: relative;
+
+}
+.switch-right-label-3 {
+    margin-left: 8px;
+}
+#switch-title-3 {
+    margin-bottom: 22px;
+}
+.switch-container {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  //-webkit-transform: translate(-50%, -50%);
+  //    -ms-transform: translate(-50%, -50%);
+  //        transform: translate(-50%, -50%);
+}
+
+.radio-wrapper {
+  width: 45px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #4ba92f;
+  border-radius: 10px;
+  position: relative;
+}
+.radio-wrapper p {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  font-size: 1.7em;
+  margin: 0;
+  margin-top: 13px;
+}
+.radio-wrapper label {
+  z-index: 9;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.neutral + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  left: 33%;
+  -webkit-transition: -webkit-transform 1s;
+          transition: transform 1s;
+}
+
+.neutral:checked + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  left: 14px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.yes + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  text-align: center;
+}
+
+.yes:checked + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-name: slidein;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-name: slidein;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-transform: translateZ(0);
+}
+
+.no + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  text-align: center;
+}
+
+.no:checked + label {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-name: slideno;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-name: slideno;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-name: slideno;
+          animation-name: slideno;
+  -webkit-transform: translateZ(0);
+  background: #fff;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@keyframes slidein {
+  from {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes slideno {
+  from {
+    -webkit-transform: translate(-10px, 0);
+            transform: translate(-10px, 0);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+@keyframes slideno {
+  from {
+    -webkit-transform: translate(-10px, 0);
+            transform: translate(-10px, 0);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+@-webkit-keyframes returnLeft {
+  from {
+    -webkit-transform: translate(-10px, 0);
+            transform: translate(-10px, 0);
+  }
+  to {
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+}
+@keyframes returnLeft {
+  from {
+    -webkit-transform: translate(-10px, 0);
+            transform: translate(-10px, 0);
+  }
+  to {
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+}
+@-webkit-keyframes returnRight {
+  from {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+  to {
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+}
+@keyframes returnRight {
+  from {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+  to {
+    -webkit-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+  }
+}
+//*///////////////////////////////////////////////////*/
+.switch-box {
+    display: block;
+    margin: 30px 0;
+
+  .switch-button {
+    text-transform: uppercase;
+    font-size: 12px;
+    & > div {
+      display: inline-block;
+    }
+  }
+  .switch-title {
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+
+  .switch-left-label {
+    margin-right:5px;
+  }
+  .switch-right-label {
+    margin-left:48px;
+  }
+  
+  .switched {
+    color: $zelena;
+  }
+}
+#price-range-box {
+    padding: 30px 30px 20px 30px;
+
+  .price-range-title{
+    margin-bottom: 3px;
+    font-size: 15px;
+  }
+}
+
+input.switch:empty
+{
+  margin-left: -999999px;
+}
+
+input.switch:empty ~ label
+{
+  position: relative;
+  float: left;
+  line-height: 1.6em;
+  text-indent: 4em;
+  margin: 0.2em 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input.switch:empty ~ label:before, 
+input.switch:empty ~ label:after
+{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+  width: 3.6em;
+  background-color: $temno-siva;
+  border-radius: 1.8em;
+  -webkit-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+input.switch:empty ~ label:after
+{
+  width: 1.4em;
+  top: 0.1em;
+  bottom: 0.1em;
+  margin-left: 0.1em;
+  background-color: $bela;
+  border-radius: 0.7em;
+}
+
+input.switch:checked ~ label:before
+{
+  background-color: $zelena;
+}
+
+input.switch:checked ~ label:after
+{
+  margin-left: 2.1em;
+}
+
+/* Ion.RangeSlider
+// css version 2.0.3
+// © 2013-2014 Denis Ineshin | IonDen.com
+// ===================================================================================================================*/
+
+/* =====================================================================================================================
+// RangeSlider */
+
+.irs {
+    position: relative; display: block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+    .irs-line {
+        position: relative; display: block;
+        overflow: hidden;
+        outline: none !important;
+    }
+        .irs-line-left, .irs-line-mid, .irs-line-right {
+            position: absolute; display: block;
+            top: 0;
+        }
+        .irs-line-left {
+            left: 0; width: 11%;
+        }
+        .irs-line-mid {
+            left: 9%; width: 82%;
+        }
+        .irs-line-right {
+            right: 0; width: 11%;
+        }
+
+    .irs-bar {
+        position: absolute; display: block;
+        left: 0; width: 0;
+    }
+        .irs-bar-edge {
+            position: absolute; display: block;
+            top: 0; left: 0;
+        }
+
+    .irs-shadow {
+        position: absolute; display: none;
+        left: 0; width: 0;
+    }
+
+    .irs-slider {
+        position: absolute; display: block;
+        cursor: default;
+        z-index: 1;
+    }
+        .irs-slider.single {
+
+        }
+        .irs-slider.from {
+
+        }
+        .irs-slider.to {
+
+        }
+        .irs-slider.type_last {
+            z-index: 2;
+        }
+
+    .irs-min {
+        position: absolute; display: block;
+        left: 0;
+        cursor: default;
+    }
+    .irs-max {
+        position: absolute; display: block;
+        right: 0;
+        cursor: default;
+    }
+
+    .irs-from, .irs-to, .irs-single {
+        position: absolute; display: block;
+        top: 0; left: 0;
+        cursor: default;
+        white-space: nowrap;
+    }
+
+.irs-grid {
+    position: absolute; display: none;
+    bottom: 0; left: 0;
+    width: 100%; height: 20px;
+}
+.irs-with-grid .irs-grid {
+    display: block;
+}
+    .irs-grid-pol {
+        position: absolute;
+        top: 0; left: 0;
+        width: 1px; height: 8px;
+        background: #000;
+    }
+    .irs-grid-pol.small {
+        height: 4px;
+    }
+    .irs-grid-text {
+        position: absolute;
+        bottom: 0; left: 0;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 9px; line-height: 9px;
+        padding: 0 3px;
+        color: #000;
+    }
+
+.irs-disable-mask {
+    position: absolute; display: block;
+    top: 0; left: -1%;
+    width: 102%; height: 100%;
+    cursor: default;
+    background: rgba(0,0,0,0.0);
+    z-index: 2;
+}
+.irs-disabled {
+    opacity: 0.4;
+}
+.lt-ie9 .irs-disabled {
+    filter: alpha(opacity=40);
+}
+
+
+.irs-hidden-input {
+    position: absolute !important;
+    display: block !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none !important;
+    z-index: -9999 !important;
+    background: none !important;
+    border-style: solid !important;
+    border-color: transparent !important;
+}/* Ion.RangeSlider, Simple Skin
+// css version 2.0.3
+// © Denis Ineshin, 2014    https://github.com/IonDen
+// © guybowden, 2014        https://github.com/guybowden
+// ===================================================================================================================*/
+
+/* =====================================================================================================================
+// Skin details */
+
+.irs {
+    height: 55px;
+}
+/*.irs-with-grid {
+    height: 75px;
+}*/
+.irs-line {
+    height: 5px; top: 33px;
+    background: $temno-siva;
+    //background: linear-gradient(to bottom, #DDD -50%, #FFF 150%); /* W3C */
+    border: 1px solid #CCC;
+    border-radius: 16px;
+    -moz-border-radius: 16px;
+}
+    .irs-line-left {
+        height: 4px;
+    }
+    .irs-line-mid {
+        height: 4px;
+    }
+    .irs-line-right {
+        height: 4px;
+    }
+
+.irs-bar {
+    height: 5px; top: 33px;
+    border-top: 1px solid $zelena;
+    border-bottom: 1px solid $zelena;
+    background: $zelena;
+    //background: linear-gradient(to top, $zelena 0%,$zelena 100%); /* W3C */
+}
+    .irs-bar-edge {
+        height: 5px; top: 33px;
+        width: 14px;
+        border: 1px solid #428bca;
+        border-right: 0;
+        background: $zelena;
+        //background: linear-gradient(to top, rgba(66,139,202,1) 0%,rgba(127,195,232,1) 100%); /* W3C */
+        border-radius: 16px 0 0 16px;
+        -moz-border-radius: 16px 0 0 16px;
+    }
+
+.irs-shadow {
+    height: 2px; top: 38px;
+    background: #000;
+    opacity: 0.3;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.lt-ie9 .irs-shadow {
+    filter: alpha(opacity=30);
+}
+
+.irs-slider {
+    top: 25px;
+    width: 20px; height: 20px;
+    //border: 1px solid #AAA;
+    background: $zelena;
+    //background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(220,220,220,1) 20%,rgba(255,255,255,1) 100%); /* W3C */
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    //box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.irs-slider.state_hover, .irs-slider:hover {
+    background: $zelena;
+}
+
+.irs-min, .irs-max {
+    /*color: $temno-siva;
+    font-size: 12px; line-height: 1.333;
+    text-shadow: none;
+    top: 0;
+    padding: 1px 5px;
+    //background: rgba(0,0,0,0.1);
+    border-radius: 3px;
+    -moz-border-radius: 3px;*/
+    display: none;
+}
+
+.lt-ie9 .irs-min, .lt-ie9 .irs-max {
+    //background: #ccc;
+}
+
+.irs-from, .irs-to, .irs-single {
+    color: $crna;
+    font-size: 14px; line-height: 1.333;
+    text-shadow: none;
+    font-weight: bold;
+    padding: 1px 5px;
+    //background: #428bca;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.lt-ie9 .irs-from, .lt-ie9 .irs-to, .lt-ie9 .irs-single {
+    background: $zelena;
+}

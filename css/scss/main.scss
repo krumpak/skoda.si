@@ -1,0 +1,616 @@
+///*@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap-sprockets';*/
+
+$crna: #000;
+$bela: #fff;
+$svetlo-siva: #ececec;
+$srednje-siva: #cdcdcd;
+$temno-siva: #979797;
+$zelena: #4ba92f;
+$rdeca: #f00;
+
+@import 'custom-variables';
+@import './bootstrap-sass-3.3.5/assets/stylesheets/bootstrap';
+@import 'custom-mixins';
+
+/* Custom CSS */
+html, body {
+	width: 100%;
+	height: 100%;
+	color: $crna;
+	font-family: 'Skoda Pro';
+}
+
+.green {
+	color: $zelena;
+}
+.red {
+	color: $rdeca;
+}
+.black-button {
+	background-color: $crna;
+	border-color: $crna;
+	&:hover {
+		background-color: $temno-siva;
+		border-color: $temno-siva;
+	}
+
+}
+h1, h2, h3, h4, h5, h6, strong, b, mark { font-family: 'Skoda Pro Bold'; }
+
+.glyphicon, .icon, .radio-wrapper label, .car-model, .selected-back, #most-deliverable, .most-viewed, .wish-car {
+	cursor:pointer;
+}
+
+/* TOP BAR */
+#top-drop-down{
+	color: $bela;
+	text-align: center;
+	background-color: $crna;
+}
+#top, #top-pick, main{
+	max-width: 1440px;
+	margin: 0 auto;
+}
+#top{
+	border-bottom: 1px solid $temno-siva;
+
+	& a, & a:active, & a:hover, & a:focus { outline:0; border:0 }
+}
+.top-right {
+	text-align: right;
+	padding-right: 0;
+}
+#top-button {
+	padding-right: 10px;
+	box-sizing: border-box;
+	display:inline-block;
+	height: 60px;
+	white-space: nowrap;
+	line-height: 60px;
+	border-left: 1px solid $temno-siva;
+
+	& > button {
+		background-color: rgba(255,255,255,0);
+		border:0;
+	}
+	.dropdown-menu {
+		margin:0;
+		padding:0;
+		@include all-radius(0);
+		top: 100%;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	li {
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	span {
+		padding-left:10px;
+	}
+
+	.icon {
+		color: $srednje-siva;
+	}
+	.seznam-zelja-besedilo {
+		color: $zelena;
+		text-transform: uppercase;
+	}
+	.glyphicon-menu-down {
+		color: $crna;
+	}
+	/* seznam želja */
+	.wish-car {
+		display: inline-block;
+		border: 1px solid $svetlo-siva;
+		
+		.wish-top {
+			border-bottom: 1px solid $svetlo-siva;
+
+			img {
+				width: 140px;
+			}
+		}
+		.wish-bottom {
+			padding: 10px;
+			box-sizing: border-box;
+		
+			p {
+				margin: 0;
+				padding:0;
+				font-weight: bold;
+				line-height: 20px;
+			}
+		}
+	}
+	.wish-buttons {
+		line-height: 20px;
+		margin-top: 10px;
+	}
+}
+.wish-car + .wish-car {
+	margin-left: 10px;
+}
+
+#top-pick {
+	height: 60px;
+	line-height: 60px;
+	white-space: nowrap;
+	font-size: 20px;
+	font-family: 'Skoda Pro Light';
+
+	& a, & a:active, & a:hover, & a:focus { outline:0; border:0 }
+	a { 
+		color: $crna;
+		text-decoration:none;
+	}
+}
+#top-pick div {
+	min-height: 60px;
+}
+#top-pick-close {
+	line-height: 10px;
+}
+#top-pick-close a {
+	text-decoration: none;
+	line-height: 60px;
+	color: $crna;
+	font-size: 50px;
+}
+//#slider-swipe .left, #slider-swipe .right {
+//	top: 150px;
+//}
+/* SLIDER */
+.image-container {
+	width: 100%;
+	height: 370px;
+	background-repeat:no-repeat;
+	background-position: top center;
+    background-size:cover;
+}
+#carousel-counter {
+	border: 1px solid $crna;
+	width: 40px;
+	height: 40px;
+    position: absolute;
+    top: 81%;
+    left: 94%;
+    z-index: 999;
+	text-align: center;
+}
+#carousel-counter span {
+	line-height: 38px;
+	font-size: 13px;
+	font-family: 'Skoda Pro Light';
+}
+/* SLIDER CONTENT */
+.carousel-caption {
+	width: 30%;
+	margin-left: 40%;
+
+	.oglas {
+		color: $crna;
+		text-align: left;
+		
+		.text-on {
+			display: inline;
+		}
+		h1 {
+			font-size: 18px;
+		}
+		.icon-heart-o {
+			color: $zelena;
+			padding-left: 20px;
+		}
+		p {
+			font-family: 'Skoda Pro';
+			padding: 2px 0;
+			margin:0;
+		}
+		hr {
+			border-top: 1px solid $temno-siva;
+			width: 100%;
+			padding-bottom: 10px;
+			margin:0;
+		}
+		a {
+			color: $zelena;
+			text-decoration: none;
+		}
+		span, b, strong {
+			display: inline-block;
+		}
+		.green {
+			color: $zelena;
+		}
+		.highlight {
+			font-size: 25px;
+			font-family: 'Skoda Pro Bold';
+		}
+
+		& a, & a:active, & a:hover, & a:focus { outline:0; border:0 }
+	}
+	.obletnica {
+		text-align: right;
+		color: $crna;
+
+		h1 {
+			font-size: 40px;
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+		img {
+			margin-top: 20px;
+		}
+	}
+}
+
+/* NAVIGATION */
+nav {
+	background-color: $svetlo-siva;
+
+	& a, & a:active, & a:hover, & a:focus { outline:0; border:0 }
+}
+nav ul {
+	margin: 0;
+	padding:0;
+}
+nav ul li {
+	margin:0;
+	padding:0;
+	min-height: 65px;
+	line-height: 65px;
+	white-space: nowrap;
+	display:inline-block;
+	box-sizing: border-box;
+}
+nav a:link, nav a:active, nav a:visited, nav a:hover {
+	font-family: 'Skoda Pro Bold';
+	text-decoration: none;
+	padding: 0 20px;
+	color: $crna;
+}
+nav .active, nav ul li:hover{
+	background-color: $bela;
+}
+/* Switches */
+@import 'switches';
+
+/* PAGE CONTENT */
+section {
+	margin-top: 30px;
+}
+article {
+	h2 {
+		font-size: 15px;
+		margin: 0;
+		padding: 15px 0;
+	}
+	& p + p {
+		margin: 0;
+		padding: 0 0 5px 0;
+	}
+	.dodatna-oprema > div {
+		border-top: 1px solid $svetlo-siva;
+	}
+}
+
+/* Izrani model */
+#selected-model {
+	.selected-back {
+		color: $crna;
+		text-align: center;
+		background-color: $svetlo-siva;
+		line-height: 20px;
+		height: 50px;
+		padding: 5px;
+		margin: 0 20px 30px 0;
+		box-sizing: border-box;
+	}
+	.selected-back, .selected-heading {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.selected-heading {
+		font-size: 72px;
+		font-family: 'Skoda Pro Light';
+		margin-bottom: 30px;
+		color: $svetlo-siva;
+	}
+}
+.car-model {
+	text-align: center;
+	border: 1px solid $svetlo-siva;
+	margin-bottom: 30px;
+
+	.model-img {
+		border-bottom: 1px solid $svetlo-siva;
+		
+		.icon-heart-o {
+			float: right;
+			margin: 10px 15px 0 0;
+		}
+		img {
+			width: 180px;
+			margin: 10px auto;
+		}
+	}
+	.selected {
+		background-color: $svetlo-siva;
+	}
+}
+.model-content {
+	text-align: left;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 15px;
+
+	mark {
+		background-color: rgba(255,255,255,0);
+		font-weight: bold;
+		font-size: 20px;
+		margin:0;
+		padding:0;
+	}
+	ul {
+		padding:0 0 0 15px;
+	}
+	li {
+		color: $zelena;
+	}
+	li span {
+		color: $crna;
+	}
+	.most-viewed>strong, .most-viewed>mark, .most-viewed-highlight>strong, .most-viewed-highlight>mark {
+		display: block;
+		width: 50%;
+		float: left;
+		padding: 20px 0;
+		line-height: 10px;
+	}
+	.most-viewed-highlight>mark {
+		text-align: center;
+	}
+}
+.selected-most-viewed-title {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Skoda Pro Light';
+	margin-bottom: 30px;
+}
+.bordered {
+	border: 1px solid $svetlo-siva;
+	
+	.selected-most-viewed-img {
+		height: 360px
+	}
+	.model-content {
+		background-color: $svetlo-siva;
+		min-height: 360px;
+		border: 1px solid $svetlo-siva;
+		
+		.most-viewed-highlight {
+			padding-bottom: 30px;
+			border: 1px solid $svetlo-siva;
+		}
+	}
+}
+#most-deliverable-title{
+	text-align: center;
+	color: $svetlo-siva;
+	font-size: 72px;
+	font-family: 'Skoda Pro Light';
+}
+#most-deliverable {
+	&>li {
+		display: inline-block;
+		text-align: center;
+		margin: 5px 10px;
+		img {
+			width: 195px;
+			height: 90px;
+		}
+	}
+	.not-available {
+		img {
+  			@include desaturate;
+  			@include opacity(.25);
+		}
+		p, .green { color: $temno-siva !important; }
+	}
+}
+#most-viewed-title {
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Skoda Pro Light';
+	margin-bottom: 30px;
+}
+.most-viewed-img, .most-viewed-sub-img {
+	background-position: center center;
+	background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.most-viewed-img {
+		width: 100%;
+		height: 225px;
+
+		.most-viewed-sub-img {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				right: 30px;
+				top: 110px;
+				position: absolute;	
+		}
+}
+.most-viewed {
+	.model-content {
+		background-color: $svetlo-siva;
+		padding: 0;
+		width: 100%;
+		box-sizing: border-box;
+
+		&>.model-padding {
+		padding: 15px;
+		}
+	}
+	.most-viewed-bottom {
+		background-color: $crna;
+		clear: both;
+		color:$bela;
+		padding: 5px 15px;
+		text-transform: uppercase;
+
+		.glyphicon-menu-up {
+			float: right;
+			margin-top: 5px;
+		}
+	}
+}
+.most-viewed-assets {
+	&>div {
+		background-color: $crna;
+		color:$bela;
+		padding: 20px;
+		line-height: 20px;
+	}
+	strong {
+		text-transform: uppercase;
+		line-height: 30px;
+	}
+	ul {
+		padding:0 0 0 15px;
+	}
+	li {
+		color: $zelena;
+		span {
+			color: $bela;
+		}
+	}
+}
+
+/* 3-COLUMN TEXT*/
+.column-text {
+@include  column-text(3,40px);
+}
+
+.google-maps {
+	width: 100%;
+	height: 400px;
+}
+
+/* ASIDE */
+aside {
+	text-align: right;
+
+	& a, & a:active, & a:hover, & a:focus { outline:0; border:0 }
+}
+aside img {
+	display: initial;
+	margin-right: 1px;
+	margin-bottom: 10px;
+	width: 300px;
+}
+
+/* FOOTER */
+footer {
+	& a, & a:active, & a:hover, & a:focus { outline:0; border:0 }
+}
+footer ul {
+	margin:30px 0 0 0;
+	padding:0;
+	color: $temno-siva;
+}
+footer ul li {
+	margin:0;
+	padding:0;
+	white-space: nowrap;
+	display:inline-block;
+	box-sizing: border-box;
+}
+footer ul li + li {
+}
+footer ul li + li::before {
+	content: "|";
+	padding: 0 10px 0 10px;
+}
+footer a:link, footer a:active, footer a:visited, footer a:hover {
+	font-size: 13px;
+	text-decoration: none;
+	color: $temno-siva;
+}
+.footer-left {
+	text-align: left;
+}
+.footer-right {
+	text-align: right;
+}
+
+/* Modal*/
+.modal-content, .modal .btn, .modal input {
+	border-radius:0;
+}
+.modal-header{
+	padding-bottom: 10px;
+}
+.modal-body {
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 15px;
+
+	hr {
+		border-color: $temno-siva;
+	}
+
+	a {
+		color: $zelena;
+	}
+
+}
+.modal-footer {
+	padding: 0 25px 25px 25px;
+}
+.modal .close span{
+	font-size: 50px;
+	line-height: 30px;
+	//color: $zelena;
+	font-family: 'Skoda Pro Light';
+}
+.modal .close, .modal .close:hover, .modal .close:focus {
+	opacity: 1;
+}
+.modal h4 {
+	text-transform: uppercase;
+}
+#pick-seller {
+	.white-button {
+	    width: 100%;
+	    background-color: $bela;
+	    border-color: $temno-siva;
+	    color: $temno-siva;
+		&:hover, &:active  {
+			background-color: $svetlo-siva;
+			border-color: $svetlo-siva;
+	    	color: $temno-siva;
+		}
+	}
+	.dropdown {
+	    margin-bottom: 10px;
+	}
+	.dropdown button {
+	    text-align: left;
+	}
+	/*.dropdown button > span {
+	    text-align: right;
+	}*/
+	.dropdown-menu {
+	    width: 100%;
+	}
+	#picked-content {
+		display: none;
+	}
+}
+
+@import 'custom-media-query';
