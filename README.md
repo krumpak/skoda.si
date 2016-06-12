@@ -1,4 +1,4 @@
-# skoda.si
+# skoda.si / hudobro.si
 
 HTML5, CSS, Bootstrap, jQuery, font icon, PHP, Grunt
 
